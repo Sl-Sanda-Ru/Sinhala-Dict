@@ -24,7 +24,7 @@ Run These Commands To Run Dictionay
 
 **Notice:**
 
-To Use The Bomber Type The Following Commands In Termux:
+To Use The Dictionary Type The Following Commands In Termux:
 ```
 apt update && apt upgrade -y
 apt install git python -y
@@ -37,7 +37,7 @@ python3 dict.py
 
 **Notice:**
 
-To Use The Bomber Type The Following Commands In Your Linux Shell:
+To Use The Dictionay Type The Following Commands In Your Linux Shell:
 ```
 sudo apt update
 sudo apt install git python3 python3-pip -y
