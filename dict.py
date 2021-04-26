@@ -1,6 +1,6 @@
 from time import sleep
 from os import system,get_terminal_size,name
-system('git stash && git pull')
+#system('git stash && git pull')
 clear = 'clear' if name == 'posix' else 'cls'
 try:
 	from colorama import init,Fore
@@ -8,7 +8,7 @@ try:
 	from pyfiglet import Figlet
 	from requests import get
 except ModuleNotFoundError:
-	system('pip install requests bs4 colorama lolcat pyfiglet')
+	system('pip3 install requests bs4 colorama lolcat pyfiglet')
 from random import choice
 #Colors
 blu=Fore.BLUE
@@ -26,7 +26,6 @@ ligre=Fore.LIGHTGREEN_EX
 rst=Fore.RESET
 bold='\x1b[1m'
 fore=list((blu,cya,gre,yel,red,mag,liyel,lired,limag,liblu,licya,ligre))
-words = []
 tsize = get_terminal_size().columns
 init(autoreset=True)
 def req_soup(search):
@@ -56,6 +55,8 @@ def logo():
 	print(bold+col+'_'*nu+liyel+msg+col+'_'*nu+'\n')
 	sleep(1.3)
 def main():
+	global words
+	words = []
 	try:
 		logo()
 		search = input(bold+choice(fore)+'[+] Enter The Word: ')
@@ -90,7 +91,7 @@ def main():
 		if input(bold+choice(fore)+'[+] Press Enter To Exit Or Any Other Key To Goto Main Menu'):
 			main()
 		else:
-			exit();
+			exit()
 	except KeyboardInterrupt:
 		exit()
 if __name__ == '__main__':
