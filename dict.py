@@ -1,6 +1,6 @@
 from time import sleep
 from os import system,get_terminal_size,name
-#system('git stash && git pull')
+system('git stash && git pull')
 clear = 'clear' if name == 'posix' else 'cls'
 try:
 	from colorama import init,Fore
